@@ -13,7 +13,7 @@ lora_args:
 
 sft_args:
   report_to: "wandb"
-  output_dir: "./sft_regen_think_checkpoints"
+  output_dir: "./checkpoints/sft_regen_think_checkpoints"
 
   # train
   batch_size: 32
