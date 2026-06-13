@@ -9,7 +9,8 @@
       "Bash(python -c \"import vllm; print\\('vllm', vllm.__version__\\)\")",
       "Bash(python -c \"import torch; print\\('cuda', torch.cuda.is_available\\(\\), torch.cuda.device_count\\(\\)\\)\")",
       "Bash(nvidia-smi --query-gpu=name,memory.total --format=csv)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(python _t_eval.py)"
     ]
   }
 }

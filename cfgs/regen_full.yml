@@ -20,7 +20,7 @@ sft_args:
   max_length: 2048
   learning_rate: 2e-4
   lr_scheduler_type: "cosine"
-  warmup_ratio: 0.05
+  warmup_steps: 7
   num_train_epochs: 2
   assistant_only_loss: true
 
