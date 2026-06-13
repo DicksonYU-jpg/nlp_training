@@ -1,3 +1,11 @@
 pip install liger-kernel
 
- 
+hf auth login --force
+wandb login
+
+cs552-cyu-g11-lab-232153
+runai workload list # list out the workloads
+runai workspace exec cs552-cyu-g11-lab-104546 -t -i -- /bin/bash # Access to the shell
+runai workspace exec cs552-cyu-g11-lab-113434 -- nvidia-smi # Check the GPU status
+runai workspace resume cs552-cyu-g11-lab-123551  # Resume the job if it is paused
+runai workspace delete cs552-cyu-g11-lab-125827 

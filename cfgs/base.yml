@@ -1,4 +1,4 @@
-model: Qwen3-0.6B
+model: Qwen/Qwen3-0.6B
 dataset: Dicksonycx/MetaMath-Original
 
 wandb_args:
