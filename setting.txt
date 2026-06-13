@@ -1,4 +1,5 @@
 pip install liger-kernel
+pip install bitsandbytes --upgrade
 
 hf auth login --force
 wandb login

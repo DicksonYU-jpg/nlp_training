@@ -28,7 +28,8 @@ def sft_train(cfg_path: str):
 
     # Load model and tokenizer
     tokenizer = AutoTokenizer.from_pretrained(cfgs.model)
-    model = AutoModelForCausalLM.from_pretrained(cfgs.model, dtype="auto")
+    model = AutoModelForCausalLM.from_pretrained(cfgs.model, dtype="auto", 
+                                                 attn_implementation="flash_attention_2")
     
     # Load dataset
     dataset = load_dataset(cfgs.dataset, split="train")
