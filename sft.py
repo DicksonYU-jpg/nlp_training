@@ -31,11 +31,11 @@ def sft_train(cfg_path: str):
     model = AutoModelForCausalLM.from_pretrained(cfgs.model, dtype="auto", 
                                                  attn_implementation="flash_attention_2")
     
-    # Load dataset
+    # Load dataset (fixed seed so the split is identical across ablation runs / resumes)
     dataset = load_dataset(cfgs.dataset, split="train")
-    split = dataset.train_test_split(test_size=0.05)
+    split = dataset.train_test_split(test_size=0.05, seed=42)
     train, eval = split["train"], split["test"]
-    
+
     trainer = SFTTrainer(
         model = model,
         processing_class = tokenizer,
@@ -44,8 +44,9 @@ def sft_train(cfg_path: str):
         train_dataset = train,
         eval_dataset = eval
     )
-    
+
     trainer.train(resume_from_checkpoint=resume_from)
+    wandb.finish()
 
 def main():
     # get the full path of cfgs
