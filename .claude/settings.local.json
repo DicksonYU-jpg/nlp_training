@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\dicksonyu1230\\\\exchange\\\\Modern_NLP\\\\sft\")",
+      "Read(///wsl.localhost/Ubuntu/wsl.localhost/Ubuntu/home/dicksonyu1230/exchange/Modern_NLP/**)",
+      "Read(///wsl.localhost/Ubuntu/wsl.localhost/Ubuntu/home/dicksonyu1230/exchange/Modern_NLP/sft/**)",
+      "Bash(python -c \"import datasets, transformers, trl, peft; print\\('datasets', datasets.__version__\\); print\\('transformers', transformers.__version__\\)\")",
+      "Bash(python -c \"import datasets; print\\('datasets', datasets.__version__\\)\")",
+      "Bash(python -c \"import vllm; print\\('vllm', vllm.__version__\\)\")",
+      "Bash(python -c \"import torch; print\\('cuda', torch.cuda.is_available\\(\\), torch.cuda.device_count\\(\\)\\)\")",
+      "Bash(nvidia-smi --query-gpu=name,memory.total --format=csv)",
+      "Bash(python -c ' *)"
+    ]
+  }
+}
