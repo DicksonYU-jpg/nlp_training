@@ -25,7 +25,6 @@ sft_args:
   assistant_only_loss: true
 
   # optimization
-  packing: true
   use_liger_kernel: true
   bf16: true
   packing: true
@@ -33,11 +32,11 @@ sft_args:
 
   # eval
   eval_strategy: "steps"
-  eval_steps: 20
+  eval_steps: 30
   per_device_eval_batch_size: 32
   load_best_model_at_end: true
 
   # save
   save_strategy: "steps"
-  save_steps: 20
+  save_steps: 30
   save_total_limit: 20
