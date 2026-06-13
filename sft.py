@@ -54,6 +54,8 @@ def main():
         sft_train(str(cfg_path))
         print(f"Finished SFT training with config: {cfg_path}\n\n")
 
+if __name__ == "__main__":
+    main()
     
     
 
