@@ -51,7 +51,7 @@ def main():
     
     for cfg_path in cfg_paths:
         print(f"Starting SFT training with config: {cfg_path}")
-        sft_train("./cfgs"cfg_path))
+        sft_train(str(cfg_path))
         print(f"Finished SFT training with config: {cfg_path}\n\n")
 
 if __name__ == "__main__":

@@ -25,7 +25,6 @@ sft_args:
   assistant_only_loss: true
 
   # optimization
-  packing: true
   use_liger_kernel: true
   bf16: true
   packing: true
