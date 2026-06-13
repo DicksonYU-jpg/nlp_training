@@ -31,7 +31,7 @@ def sft_train(cfg_path: str):
     model = AutoModelForCausalLM.from_pretrained(cfgs.model, dtype="auto")
     
     # Load dataset
-    dataset = load_dataset(cfgs.dataset)
+    dataset = load_dataset(cfgs.dataset, split="train")
     train, eval = dataset.train_test_split(test_size=0.05)
     
     trainer = SFTTrainer(
